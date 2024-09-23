@@ -8,6 +8,7 @@
         *{
             /* border: 2px solid blue ; */
             margin: 0;
+            padding: 0%;
             background-color: antiquewhite;
             text-align: center;
             font-size: larger;
@@ -15,7 +16,7 @@
         p{
             border: 5px solid brown;
         }
-        /* header{
+        header{
             height: 25%;
             background-color: aquamarine;
         }
@@ -31,7 +32,7 @@
         }
         button{
             padding: 0.1em;
-        } */
+        }
     </style>
 
 </head>
@@ -71,6 +72,8 @@
       let dom = document.querySelector(selector);
       return dom;
     }
+    let myBody=document.querySelector("body");
+        myBody.style.height = (innerHeight-50)+"px"
     </script>
     
 </body>
