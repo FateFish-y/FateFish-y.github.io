@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CET-6</title>
+    <style>
+        *{
+            /* border: 2px solid blue ; */
+            margin: 0;
+            background-color: antiquewhite;
+            text-align: center;
+            font-size: larger;
+        }
+        p{
+            border: 5px solid brown;
+        }
+        /* header{
+            height: 25%;
+            background-color: aquamarine;
+        }
+         main{
+            height: 65% ;
+            background-color: bisque;
+        }
+        footer{
+            font-size: 0.5em;
+            height: 10%;
+            background-color: brown;
+            color: white ;
+        }
+        button{
+            padding: 0.1em;
+        } */
+    </style>
+
+</head>
+<body>
+    <header>
+      CET6-myproject
+    </header>
+    <main>
+      <p id="en">words</p>
+      <p id="pr">phonetic transcription</p>
+      <p id="cn">Chinese Annotations</p>
+    </main>
+    <!-- <button id="load">读入单词</button> -->
+    <button id="rand">随机单词</button>
+    <footer>
+      2024年9月23日
+    </footer>
+    <script>
+      let cet6String = "";
+    fetch("./cet6.txt")
+    .then(txt => cet6String = txt);
+    let randWord = select("button#rand");
+    randWord.onclick = function(){
+      let wordArray = cet6String.split('\r\n');
+      let i = Math.floor(Math.random()*wordArray.length);
+      let aWord = wordArray[i];
+      let begin = aWord.indexOf('\t');
+      let end = aWord.lastIndexOf('\t');
+      let en = aWord.slice(0,begin);
+      let pr = aWord.slice(begin+1,end);
+      let cn = aWord.slice(end+1);
+      select("p#en" ).textContent = en;
+      select("p#pr").textContent = pr;
+      select("p#cn").textContent = cn;
+    };
+    function select(selector){
+      let dom = document.querySelector(selector);
+      return dom;
+    }
+    </script>
+    
+</body>
+</html>
