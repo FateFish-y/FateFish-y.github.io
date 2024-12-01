@@ -1,112 +1,184 @@
-   *{
-        margin: 0;
-        box-sizing: border-box;
-        text-align: center;
-    }
-   body{
-     font-size: calc(10px+1vh);
-     height: 98vh ;    
-     position: relative;
-    }
-    header{font-size: 2em;
-           height: 15% ;
-           position: relative;
-    }
-    nav{ height: 6% ;}
-    nav button{
-        font-size: 1.2em;
-       }
-    button.small{
-        width: 30%;
-        padding: 0.1em 0.2em;  
-    }
-    button{
-        display: inline;
-        border: none;
-        background-color: black;
-        color:greenyellow;
-    }
-    button:hover{
-        color:white;
-    }
-    button.big{
-        width: 45%;
-        padding: 0.1em 0.5em;  
-    }
-    main{
-        margin-top: 1em;
-        font-size: 1.6em;
-        height: 60% ;
-        position: relative;
-    }
-    main p#en{
-        font-size: 1.6em;
-        color:lightblue;
-        text-shadow: 2px 2px gray ;
-    }
-    main p#pn{
-        font-size: 1.2em;
-        color:lightseagreen;
-       }
-    form{
-        position: absolute ;
-        width: 90% ;
-        height: 50% ;
-        border: 2px solid gray;
-        left: 5% ;
-        top: 10% ;
-        background-color: antiquewhite;
-        font-size: 1.1em ;
-    }
-    form input{
-        font-size: 1.1em ;
-        width: 6em;
-    }
-    form button{
-        font-size: 1.3rem ;
-        margin-right: 1em;
-    }
-    footer{
-        height: 20% ;
-        font-size:1.2em;
-    }
-    span#level{
-        display: block;
-        position: absolute;
-        right:20px;
-        top:1px;
-        color:blue;
-        font-size: 0.5em;
-    }
-    p.cn{
-      border:1px solid blue ;
-      background-color: antiquewhite;
-      cursor: pointer;
-      font-size: 0.8em;
-      margin-bottom: 0.2em;
-    }
-    p.cn.right{
-      background-color: yellow;
-      color: red ;
-    }
-    p.cn.wrong{
-      background-color: gray;
-      color:white;
-    }
-    p.cn:hover{
-        color: blue ;
-    }
-    header span#response{
-        font-size: 0.8em;
-        color: red;
-        position: absolute;
-        right: 0.5em;
-        top:2em;
-    }
-    p#log{
-        background-color: gray;
-        color: white;
-        font-size: 0.65em;
-        padding: 5px 10px;
-        text-align: center;
-    }
+/* 重置全局样式 */
+* {
+    margin: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* 设置body样式 */
+body {
+    font-size: calc(10px + 1vh);
+    height: 98vh;
+    position: relative;
+    background-color: #f4f4f9; /* 柔和的背景色 */
+}
+
+/* 设置header样式 */
+header {
+    font-size: 2em;
+    height: 15%;
+    position: relative;
+    background-color: #e0e0e0; /* 柔和的灰色背景 */
+}
+
+/* 设置nav样式 */
+nav {
+    height: 6%;
+    background-color: #d3d3d3; /* 稍深的灰色背景 */
+}
+
+/* 设置nav中button的样式 */
+nav button {
+    font-size: 1.2em;
+    background-color: #607d8b; /* 更柔和的深色 */
+    color: #ffffffcc; /* 柔和的白色 */
+}
+
+/* 设置button通用样式 */
+button {
+    display: inline;
+    border: none;
+    background-color: #607d8b; /* 更柔和的深色 */
+    color: #ffffffcc; /* 柔和的白色 */
+    cursor: pointer; /* 添加鼠标悬停效果 */
+}
+
+/* 设置button悬停效果 */
+button:hover {
+    color: #ffffff; /* 更亮的白色 */
+    background-color: #455a64; /* 更深的背景色 */
+}
+
+/* 设置small类button的样式 */
+button.small {
+    width: 30%;
+    padding: 0.1em 0.2em;
+}
+
+/* 设置big类button的样式 */
+button.big {
+    width: 45%;
+    padding: 0.1em 0.5em;
+}
+
+/* 设置main样式 */
+main {
+    margin-top: 1em;
+    font-size: 1.6em;
+    height: 60%;
+    position: relative;
+    background-color: #f9f9f9; /* 柔和的白色背景 */
+}
+
+/* 设置main中特定p元素的样式 */
+main p#en {
+    font-size: 1.6em;
+    color: #4db6ac; /* 柔和的绿色 */
+    text-shadow: 1px 1px #cccccc; /* 柔和的阴影 */
+}
+
+main p#pn {
+    font-size: 1.2em;
+    color: #4caf50; /* 柔和的绿色 */
+}
+
+/* 设置form样式 */
+form {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #d3d3d3; /* 柔和的灰色边框 */
+    
+    top: 10%;
+    background-color: #fafafa; /* 柔和的白色背景 */
+    font-size: 1.1em;
+    padding: 1em; /* 添加内边距 */
+}
+
+/* 设置form中input的样式 */
+form input {
+    font-size: 1.1em;
+    width: 6em; /* 调整为固定宽度或根据需要调整 */
+    padding: 0.5em; /* 添加内边距 */
+    margin-bottom: 1em; /* 添加下边距 */
+    border: 1px solid #d3d3d3; /* 柔和的灰色边框 */
+    border-radius: 4px; /* 添加圆角 */
+}
+
+/* 设置form中button的样式 */
+form button {
+    font-size: 1.3rem;
+    margin-right: 1em;
+    padding: 0.7em 1.5em; /* 调整内边距 */
+    background-color: #607d8b; /* 更柔和的深色 */
+    color: #ffffffcc; /* 柔和的白色 */
+}
+
+/* 设置footer样式 */
+footer {
+    height: 20%;
+    font-size: 1.2em;
+    background-color: #333333cc; /* 柔和的深色背景 */
+    color: #ffffffcc; /* 柔和的白色 */
+    padding: 1em 0; /* 添加内边距 */
+    text-align: center; /* 保持文本居中 */
+}
+
+/* 设置span#level样式 */
+span#level {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 1px;
+    color: #2196f3; /* 柔和的蓝色 */
+    font-size: 0.5em;
+}
+
+/* 设置p.cn通用样式 */
+p.cn {
+    border: 1px solid #4db6ac; /* 柔和的绿色边框 */
+    background-color: #f9f9f9; /* 柔和的白色背景 */
+    cursor: pointer;
+    font-size: 0.8em;
+    margin-bottom: 0.2em;
+    padding: 0.5em; /* 添加内边距 */
+    border-radius: 4px; /* 添加圆角 */
+    transition: background-color 0.3s ease, color 0.3s ease; /* 添加过渡效果 */
+}
+
+/* 设置p.cn.right样式 */
+p.cn.right {
+    background-color: #ffeb3b; /* 柔和的黄色 */
+    color: #000000; /* 黑色 */
+}
+
+/* 设置p.cn.wrong样式 */
+p.cn.wrong {
+    background-color: #e0e0e0; /* 柔和的灰色 */
+    color: #000000; /* 黑色 */
+}
+
+/* 设置p.cn悬停效果 */
+p.cn:hover {
+    color: #2196f3; /* 柔和的蓝色 */
+    background-color: #e0f7fa; /* 柔和的青色背景 */
+}
+
+/* 设置header中span#response样式 */
+header span#response {
+    font-size: 0.8em;
+    color: #f44336; /* 柔和的红色 */
+    position: absolute;
+    right: 0.5em;
+    top: 2em;
+}
+
+/* 设置p#log样式 */
+p#log {
+    background-color: #616161; /* 柔和的灰色 */
+    color: #ffffff; /* 白色 */
+    font-size: 0.65em;
+    padding: 5px 10px;
+    text-align: center;
+    border-radius: 4px; /* 添加圆角 */
+}
